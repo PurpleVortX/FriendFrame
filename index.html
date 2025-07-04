@@ -133,31 +133,6 @@
     </div>
     </div>
 
-    <script>
-    // Slideshow images for this card (ensure roughly same aspect ratio)
-    const slideshowImages = [
-        "https://picsum.photos/id/1041/400/400",
-        "https://picsum.photos/id/1042/400/400",
-        "https://picsum.photos/id/1043/400/400",
-        "https://picsum.photos/id/1044/400/400"
-    ];
-
-    const slideshowCard = document.querySelector('.slideshow-card');
-    const imgElement = slideshowCard.querySelector('img');
-    let currentIndex = 0;
-    const intervalTime = 3000; // 3 seconds
-
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % slideshowImages.length;
-        imgElement.src = slideshowImages[currentIndex];
-    }, intervalTime);
-
-    slideshowCard.addEventListener('click', () => {
-        const link = slideshowCard.querySelector('.overlay a').href;
-        window.open(link, '_blank');
-    });
-    </script>
-
 </div>
 
 
