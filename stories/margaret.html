@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stories - Katie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #1c1c1c; /* dark background */
+      color: #e0e0e0;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      width: 240px;
+      background: #181818;
+      color: #fff;
+      padding: 24px;
+      flex-shrink: 0;
+      overflow-y: auto;
+      border-right: 1px solid #2d2d2d;
+    }
+
+    nav h2 {
+      margin-top: 0;
+      font-size: 1.3em;
+      margin-bottom: 1em;
+      color: #ccc;
+    }
+
+    nav a {
+      display: block;
+      margin: 12px 0;
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    /* Main Content */
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      padding: 40px;
+    }
+
+    .content {
+      background: #2a2a2a; /* lighter than page background */
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    section {
+      margin-bottom: 80px;
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 1.8em;
+      color: #f0f0f0;
+      margin-bottom: 0.5em;
+    }
+
+    section p {
+      line-height: 1.8;
+      font-size: 1.05em;
+      color: #d0d0d0;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #2d2d2d;
+      }
+
+      .content-wrapper {
+        padding: 20px;
+      }
+
+      .content {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <nav>
+    <h2>Chapters</h2>
+    <a href="#chapter1">1. The Beginning</a>
+    <a href="#chapter2">2. Into the Forest</a>
+    <a href="#chapter3">3. The Forgotten Temple</a>
+    <a href="#chapter4">4. Destiny’s Call</a>
+  </nav>
+
+  <!-- Main Story Content -->
+  <div class="content-wrapper">
+    <div class="content">
+      <section id="chapter1">
+        <h2>Chapter 1: The Beginning</h2>
+        <p>
+          My phone starts ringing. I look at it. It's from Katie, my old drum major from high school. I pick up.
+          "Hello?"
+        </p>
+      </section>
+
+      <section id="chapter2">
+        <h2>Chapter 2: Into the Forest</h2>
+        <p>
+          The trees grew denser and the light dimmer. Creatures of the night stirred quietly
+          while the traveler pressed on, guided by nothing but hope and a fading map.
+        </p>
+      </section>
+
+      <section id="chapter3">
+        <h2>Chapter 3: The Forgotten Temple</h2>
+        <p>
+          Deep within the forest stood an ancient stone structure, half-buried and cloaked in ivy.
+          It pulsed with a strange energy, beckoning the brave and the foolish alike.
+        </p>
+      </section>
+
+      <section id="chapter4">
+        <h2>Chapter 4: Destiny’s Call</h2>
+        <p>
+          Inside the temple, a glowing relic awaited. As the wanderer reached for it, visions
+          of a world yet to come filled their mind. The choice was clear — return, or embrace the unknown.
+        </p>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>
