@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stories - Katie - Info</title>
+  <style>
+    body {
+      margin: 40px;
+      background: #1c1c1c;
+      font-family: Arial, sans-serif;
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .main-image {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .hotspot {
+      position: absolute;
+      cursor: pointer;
+    }
+
+    .hotspot::after {
+      content: attr(data-text);
+      position: absolute;
+      bottom: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .hotspot:hover::after {
+      opacity: 1;
+    }
+
+    /* Optional visual markers (e.g. transparent circles) */
+    .hotspot-marker {
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 0, 0, 0.4);
+      border-radius: 50%;
+      border: 2px solid red;
+      pointer-events: none;
+    }
+
+    h1 {
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Hover Over the Image</h2>
+
+<div class="image-container">
+  <img src="images/IMG_9827.JPG" alt="Demo Image" class="main-image" />
+
+  <!-- Hotspots: adjust top and left for placement -->
+  <div class="hotspot" style="top: 35%; left: 60%;" data-text="Size: 36-C">
+    <div class="hotspot-marker"></div>
+  </div>
+
+  <div class="hotspot" style="top: 20%; left: 58%;" data-text="Would kiss; god-tier sucking.">
+    <div class="hotspot-marker"></div>
+  </div>
+
+  <a href="legs.html" target="_blank"
+     class="hotspot"
+     style="top: 65%; left: 55%;"
+     data-text="Thighs thick and curvy; good for huggin and touchin">
+    <div class="hotspot-marker"></div>
+  </a>
+</div>
+
+</body>
+</html>

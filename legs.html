@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zoomable Fullscreen Image</title>
+<style>
+  html, body {
+    margin: 0; padding: 0;
+    height: 100%; overflow: hidden;
+    background: black;
+  }
+  #wrapper {
+    width: 100vw; height: 100vh;
+    overflow: hidden;
+    touch-action: none;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #panzoom img {
+    max-width: none;
+    max-height: none;
+    width: auto;
+    height: auto;
+    user-select: none;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+  <div id="panzoom">
+    <img src="images/drum_major_legs_1_20.jpg" alt="Zoomable image" />
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
+<script>
+  const panzoomElem = document.getElementById('panzoom');
+  const panzoom = Panzoom(panzoomElem, {
+    maxScale: 5,
+    minScale: 1,
+    contain: 'outside',
+  });
+  document.getElementById('wrapper').addEventListener('wheel', panzoom.zoomWithWheel);
+  panzoomElem.addEventListener('dblclick', e => panzoom.zoomIn({ animate: true, focal: e }));
+
+  // Prevent image drag in Opera GX and others
+  panzoomElem.querySelector('img').addEventListener('dragstart', e => e.preventDefault());
+</script>
+
+</body>
+</html>

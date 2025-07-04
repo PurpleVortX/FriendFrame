@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Masonry Collage Gallery</title>
+<style>
+  body {
+    margin: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #1c1c1c;
+  }
+
+  /* Masonry container using CSS columns */
+  .gallery {
+    column-count: 4;      /* Number of columns */
+    column-gap: 16px;     /* Space between columns */
+  }
+
+  /* Card styles */
+  .card {
+    position: relative;
+    margin-bottom: 16px; /* Space between rows */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    will-change: transform;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;      /* Important for column layout */
+    width: 100%;         /* Full width in column */
+  }
+
+  .card:hover {
+    transform: scale(1.1) translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    z-index: 10;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;        /* Let height scale naturally */
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .card:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Responsive columns */
+  @media (max-width: 1200px) {
+    .gallery {
+      column-count: 3;
+    }
+  }
+  @media (max-width: 800px) {
+    .gallery {
+      column-count: 2;
+    }
+  }
+  @media (max-width: 500px) {
+    .gallery {
+      column-count: 1;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery" id="gallery">
+  <div class="card">
+    <img src="https://picsum.photos/id/1015/400/400" alt="Square Image" />
+  </div>
+  <div class="card">
+    <img src="images/IMG_0098.jpeg" alt="Portrait Image" />
+  </div>
+  <div class="card">
+    <img src="images/file.PNG" alt="Landscape Image" />
+  </div>
+  <div class="card">
+    <img src="images/friends.jpg" alt="Landscape Image" />
+  </div>
+</div>
+
+</body>
+</html>
