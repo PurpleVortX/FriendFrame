@@ -1,116 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Stories</title>
-<style>
-  body {
-    margin: 40px;
-    font-family: Arial, sans-serif;
-    background: #1c1c1c;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stories</title>
 
-  .gallery {
-    column-count: 4;
-    column-gap: 16px;
-  }
+  <!-- Optional default favicon (won't be used) -->
+  <link rel="icon" href="favicons/icon1.png" />
 
-  @media (max-width: 1200px) {
-    .gallery {
-      column-count: 3;
-    }
-  }
-  @media (max-width: 800px) {
-    .gallery {
-      column-count: 2;
-    }
-  }
-  @media (max-width: 500px) {
-    .gallery {
-      column-count: 1;
-    }
-  }
+  <!-- Load random favicon logic -->
+  <script src="scripts/random-favicon.js" defer></script>
 
-  .card {
-    position: relative;
-    margin-bottom: 16px;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    cursor: pointer;
-    will-change: transform;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block;
-    width: 100%;
-  }
-
-  .card:hover {
-    transform: scale(1.1) translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-    z-index: 10;
-  }
-
-  .card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover img {
-    transform: scale(1.05);
-  }
-
-  /* Overlay container - initially hidden */
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.7);
-    color: white;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    text-align: center;
-  }
-
-  /* Show overlay on hover */
-  .card:hover .overlay {
-    opacity: 1;
-  }
-
-  .overlay h3 {
-    margin: 0 0 10px;
-    font-size: 1.3em;
-  }
-
-  .overlay p {
-    margin: 0 0 15px;
-    font-size: 1em;
-    line-height: 1.3;
-  }
-
-  .overlay a {
-    padding: 8px 18px;
-    background: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-  }
-
-  .overlay a:hover {
-    background: #0056b3;
-  }
-</style>
+  
+  <link rel="stylesheet" href="mainstyle.css" />
+  
+  <script src="scripts/random-favicon.js" defer></script>
+  <script src="scripts/random-ava-image.js" defer></script>
 </head>
 <body>
 
@@ -120,7 +25,7 @@
     <div class="overlay">
       <h3>Lexi Brooks</h3>
       <p>My coworker wanted me this badly?!?!</p>
-      <a href="https://example.com/mountain" target="_blank" rel="noopener">Read</a>
+      <a href="stories/lexi.html" target="_blank" rel="noopener">Read</a>
     </div>
   </div>
 
@@ -131,7 +36,7 @@
     <div class="overlay">
       <h3>Danae Altman pt. 3</h3>
       <p>I can't live without her.</p>
-      <a href="https://example.com/trail" target="_blank" rel="noopener">Read</a>
+      <a href="stories/danae.html#chapter3" target="_blank" rel="noopener">Read</a>
     </div>
   </div>
 
@@ -140,7 +45,7 @@
     <div class="overlay">
       <h3>Danae Altman pt. 1</h3>
       <p>She wanted to try it with me???</p>
-      <a href="https://example.com/forest" target="_blank" rel="noopener">Read</a>
+      <a href="stories/danae.html#chapter1" target="_blank" rel="noopener">Read</a>
     </div>
   </div>
 
@@ -167,11 +72,9 @@
     <div class="overlay">
       <h3>Margaret Aldrich</h3>
       <p>She graduated than wanted to teach me.</p>
-      <a href="https://example.com/forest" target="_blank" rel="noopener">Read</a>
+      <a href="stories/margaret.html" target="_blank" rel="noopener">Read</a>
     </div>
   </div>
-
-  
 
   <div class="card">
     <img src="images/file.PNG" alt="Landscape Image" />
@@ -187,7 +90,7 @@
     <div class="overlay">
       <h3>Group Photo</h3>
       <p>Just a party turns more fun than anything ever seen.</p>
-      <a href="https://example.com/city" target="_blank" rel="noopener">Read</a>
+      <a href="stories/friends.html" target="_blank" rel="noopener">Read</a>
     </div>
   </div>
 
@@ -196,44 +99,65 @@
     <div class="overlay">
       <h3>Danae Altman pt. 2</h3>
       <p>She asked for more.</p>
-      <a href="https://example.com/trail" target="_blank" rel="noopener">Read</a>
+      <a href="stories/danae.html#chapter2" target="_blank" rel="noopener">Read</a>
     </div>
   </div>
 
-    <!-- Slideshow card inside the .gallery container -->
-    <div class="card slideshow-card" tabindex="0" role="button" aria-label="Slideshow card">
-    <img src="https://picsum.photos/id/1041/400/400" alt="Slideshow Image" />
-    <div class="overlay">
-        <h3>Full Slideshow</h3>
-        <p>See all the beautiful friends in my life.</p>
-        <a href="slideshow.html" target="_blank" rel="noopener">View Slideshow</a>
+    <div class="card">
+      <img src="images/jillian.jpg" alt="Portrait Image" />
+      <div class="overlay">
+        <h3>Jillian Beasley</h3>
+        <p>She called for a favor</p>
+        <a href="stories/jillian.html" target="_blank" rel="noopener">Read</a>
+      </div>
     </div>
+
+    <div class="card">
+      <img src="images/IMG_9247.JPEG" alt="Portrait Image" />
+      <div class="overlay">
+        <h3>Lainey Stroud</h3>
+        <p>She called for a favor</p>
+        <a href="stories/lainey.html" target="_blank" rel="noopener">Read</a>
+      </div>
     </div>
 
-    <script>
-    // Slideshow images for this card (ensure roughly same aspect ratio)
-    const slideshowImages = [
-        "https://picsum.photos/id/1041/400/400",
-        "https://picsum.photos/id/1042/400/400",
-        "https://picsum.photos/id/1043/400/400",
-        "https://picsum.photos/id/1044/400/400"
-    ];
+    <div class="card">
+      <img src="images/shea.png" alt="Portrait Image" />
+      <div class="overlay">
+        <h3>Shea Eldridge</h3>
+        <p>I thought she forgot me</p>
+        <a href="stories/shea.html" target="_blank" rel="noopener">Read</a>
+      </div>
+    </div>
 
-    const slideshowCard = document.querySelector('.slideshow-card');
-    const imgElement = slideshowCard.querySelector('img');
-    let currentIndex = 0;
-    const intervalTime = 3000; // 3 seconds
+    <div class="card">
+      <img src="images/lauren.jpeg" alt="Portrait Image" />
+      <div class="overlay">
+        <h3>Lauren Brooks</h3>
+        <p>The twin wanted more.</p>
+        <a href="stories/lauren.html" target="_blank" rel="noopener">Read</a>
+      </div>
+    </div>
+    
+    <div class="card" data-images='["images/Ava1.JPEG", "images/Ava2.JPEG"]'>
+      <img alt="Portrait Image" />
+      <div class="overlay">
+        <h3>Ava Moses</h3>
+        <p>I didn't know my childhood friend wanted me back...</p>
+        <a href="stories/ava.html" target="_blank" rel="noopener">Read</a>
+      </div>
+    </div>
 
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % slideshowImages.length;
-        imgElement.src = slideshowImages[currentIndex];
-    }, intervalTime);
+    <div class="card" data-images='["images/Kiyah1.JPEG", "images/Kiyah2.JPEG", "images/Kiyah3.jpeg"]'>
+      <img alt="Portrait Image" />
+      <div class="overlay">
+        <h3>Kiyah Kemp</h3>
+        <p>My ex asked for fun.</p>
+        <a href="stories/kiyah.html" target="_blank" rel="noopener">Read</a>
+      </div>
+    </div>
 
-    slideshowCard.addEventListener('click', () => {
-        const link = slideshowCard.querySelector('.overlay a').href;
-        window.open(link, '_blank');
-    });
-    </script>
+    </div>
 
 </div>
 
